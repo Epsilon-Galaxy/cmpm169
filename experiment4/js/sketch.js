@@ -61,8 +61,10 @@ function setup() {
   // resize canvas is the page is resized
   imgTile = [];
   image(img,0 ,0);
-  tileWidth = canvas.width() / tileCountY
-  tileHeight = canvas.height() / tileCountX
+  console.log(width);
+  console.log(height);
+  tileWidth = width / tileCountY;
+  tileHeight = height / tileCountX;
   noCursor();
   noFill();
   stroke(255);
