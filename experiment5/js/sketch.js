@@ -53,17 +53,21 @@ function setup() {
 
   angleMode(DEGREES);
   //noLoop();
+  background(200);
+  randomSeed(1);
+  translate(0, 200, 0);
+  branch(100);
 }
 
 // draw() function is called repeatedly, it's the main animation loop
 function draw() {
   background(200);
   
-  translate(0, 200, 0);
+
   rotateY(frameCount);
   console.log(frameCount);
   
-  branch(100);
+
 }
 
 
@@ -92,6 +96,7 @@ function branch(len){
     var b = 40 + random(-20, 20);
     
     fill(r, g, b, 200);
+    noStroke();
     
     translate(5, 0, 0);
     
