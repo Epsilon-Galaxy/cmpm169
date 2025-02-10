@@ -53,21 +53,16 @@ function setup() {
 
   angleMode(DEGREES);
   //noLoop();
-  background(200);
-  randomSeed(1);
-  translate(0, 200, 0);
-  branch(100);
+
 }
 
 // draw() function is called repeatedly, it's the main animation loop
 function draw() {
   background(200);
-  
-
+  randomSeed(1);
+  translate(0, 200, 0);
   rotateY(frameCount);
-  console.log(frameCount);
-  
-
+  branch(100);
 }
 
 
@@ -85,7 +80,7 @@ function branch(len){
       push();
       
       rotateZ(random(20, 50));
-      branch(len * 0.7);
+      branch(len * 0.55);
       
       pop();
     }
