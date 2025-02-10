@@ -61,6 +61,7 @@ function draw() {
   
   translate(0, 200, 0);
   rotateY(frameCount);
+  console.log(frameCount);
   
   branch(100);
 }
