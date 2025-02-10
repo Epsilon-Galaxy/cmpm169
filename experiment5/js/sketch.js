@@ -52,7 +52,7 @@ function setup() {
 
 
   angleMode(DEGREES);
-  noLoop();
+  //noLoop();
 }
 
 // draw() function is called repeatedly, it's the main animation loop
@@ -60,7 +60,7 @@ function draw() {
   background(200);
   
   translate(0, 200, 0);
-  
+  rotateY(frameCount);
   
   branch(100);
 }
