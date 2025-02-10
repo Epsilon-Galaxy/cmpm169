@@ -38,7 +38,7 @@ function resizeScreen() {
 function setup() {
   // place our canvas, making it fit our container
   canvasContainer = $("#canvas-container");
-  let canvas = createCanvas(canvasContainer.width(), canvasContainer.height());
+  let canvas = createCanvas(canvasContainer.width(), canvasContainer.height(), WEBGL);
   canvas.parent("canvas-container");
   // resize canvas is the page is resized
 
@@ -49,31 +49,65 @@ function setup() {
     resizeScreen();
   });
   resizeScreen();
+
+
+  angleMode(DEGREES);
+  noLoop();
 }
 
 // draw() function is called repeatedly, it's the main animation loop
 function draw() {
-  background(220);    
-  // call a method on the instance
-  myInstance.myMethod();
-
-  // Set up rotation for the rectangle
-  push(); // Save the current drawing context
-  translate(centerHorz, centerVert); // Move the origin to the rectangle's center
-  rotate(frameCount / 100.0); // Rotate by frameCount to animate the rotation
-  fill(234, 31, 81);
-  noStroke();
-  rect(-125, -125, 250, 250); // Draw the rectangle centered on the new origin
-  pop(); // Restore the original drawing context
-
-  // The text is not affected by the translate and rotate
-  fill(255);
-  textStyle(BOLD);
-  textSize(140);
-  text("p5*", centerHorz - 105, centerVert + 40);
+  background(200);
+  
+  translate(0, 200, 0);
+  
+  
+  branch(100);
 }
 
-// mousePressed() function is called once after every time a mouse button is pressed
-function mousePressed() {
-    // code to run when mouse is pressed
+
+function branch(len){
+  strokeWeight(map(len, 10, 100, 0.5, 5));
+  stroke(70, 40, 20);
+  line(0, 0, 0, 0, -len - 2, 0);
+  
+  translate(0, -len, 0);
+  
+  if(len > 10) {
+    for(var i = 0; i < 3; i++){
+      rotateY(random(100, 140));
+      
+      push();
+      
+      rotateZ(random(20, 50));
+      branch(len * 0.7);
+      
+      pop();
+    }
+  } else {
+    
+    var r = 80 + random(-20, 20);
+    var g = 120 + random(-20, 20);
+    var b = 40 + random(-20, 20);
+    
+    fill(r, g, b, 200);
+    
+    translate(5, 0, 0);
+    
+    rotateZ(90);
+    beginShape();
+    for (var i = 45; i < 135; i++){
+      var rad = 7;
+      var x = rad * cos(i);
+      var y = rad * sin(i);
+      vertex(x, y);
+    }
+    for( var i = 135; i > 45; i--){
+      var rad = 7;
+      var x = rad * cos(i);
+      var y = rad * sin(-i) + 10;
+      vertex(x, y);
+    }
+    endShape(CLOSE);
+  }
 }
