@@ -34,6 +34,7 @@ function resizeScreen() {
   // redrawCanvas(); // Redraw everything based on new size
 }
 
+var complexity = 0.5;
 // setup() function is called once when the program starts
 function setup() {
   // place our canvas, making it fit our container
@@ -62,7 +63,7 @@ function draw() {
   randomSeed(1);
   translate(0, 200, 0);
   rotateY(frameCount);
-  branch(100);
+  branch(map(mouseY, 0, height, 10, 150));
 }
 
 
@@ -80,14 +81,14 @@ function branch(len){
       push();
       
       rotateZ(random(20, 50));
-      branch(len * 0.55);
+      branch(len * complexity);
       
       pop();
     }
   } else {
     
-    var r = 80 + random(-20, 20);
-    var g = 120 + random(-20, 20);
+    var r = map(mouseX, 0, width, 20, 235) + random(-20, 20);
+    var g = map(mouseX, 0, width, 145, 205) + random(-20, 20);
     var b = 40 + random(-20, 20);
     
     fill(r, g, b, 200);
@@ -111,4 +112,18 @@ function branch(len){
     }
     endShape(CLOSE);
   }
+}
+
+function keyPressed(){
+  console.log(complexity);
+  if(complexity < 0.8){
+    if (key === 'e'){
+      complexity += 0.01;
+      console.log("increasing");
+    }
+    if (key === 'q'){
+      complexity -= 0.01;
+    }
+  }
+
 }
