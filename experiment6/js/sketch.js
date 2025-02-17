@@ -34,7 +34,8 @@ function resizeScreen() {
 }
 
 var story = {
-  "start": "This is the start of the story"
+  "start": "This is the start of the #adj# story",
+  "adj": ["sad", "happy", "bad", "good"]
 };
 
 var grammar;
