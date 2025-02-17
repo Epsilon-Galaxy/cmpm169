@@ -54,7 +54,7 @@ function setup() {
 
   grammar = tracery.createGrammar(story);
 
-  var result = grammar.flatten();
+  var result = grammar.flatten("#start#");
   console.log(result);
 
 
