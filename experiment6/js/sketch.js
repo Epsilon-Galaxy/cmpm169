@@ -54,7 +54,7 @@ var fiveStart = {
   "2adj": ["quiet", "gentle", "simple", "honest", "empty", "noble", "timid", "sleepy", "crimson", "frozen", "lively", "bitter", "sacred", "cheerful", "fragile", "sandy"],
   "3adj": ["beautiful", "mysterious", "delicate", "harmonious", "sensitive", "radiant", "elegant"],
 
-  "1verb": ["run", "fall", "sing", "jump", "soar", "fly", "push", "pull", "cut", "climb", "dive", "glide", "skip", "snap", "swim", "bend", "shine", "blink", "melt", "splash", "bloom", "chase"],
+  "1verb": ["runs", "falls", "sings", "jumps", "soars", "flies", "push", "pull", "cuts", "climbs", "dives", "glides", "skips", "snaps", "swism", "bends", "shines", "blinks", "melts", "splash", "bloom", "chase"],
   "2verb": ["whisper", "flutter", "wander", "shiver", "glisten", "travel", "stumble", "glimmer", "murmur", "gather", "follow", "hasten", "tumble", "sizzle"],
   "3verb": ["whispering", "gathering", "fluttering", "vanishing", "shimmering", "transforming", "compelling", "questioning", "rejoicing", "reflecting", "becoming", "arriving", "surviving", "expanding", "emerging", "nurturing", "returning", "belonging", "releasing", "creating", "ascending", "uniting"],
 
