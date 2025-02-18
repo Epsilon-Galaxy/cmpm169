@@ -73,7 +73,7 @@ var fiveStart = {
 
 var seven = {
   "start": "#sevenStart#",
-  "sevenStart": ["#211111#", "#22111#", "#1111112#", "#322#"],
+  "sevenStart": ["#2111111#", "#22111#", "#1111112#", "#322#"],
 
   "2111111": ["#2adj# #1noun# #1verb# #1verb# #1verb# #1verb#", "#2noun# #1verb# #1adverb# #1verb# #1verb# #1verb#", "#2noun# #1verb#, #1adj# #1noun# #1adverb# #1verb#", "#2adj# #1noun#, #1noun# #1verb# #1adverb# #1verb#"],
   "22111": ["#2adj# #2noun#, #1noun# #1adverb# #1verb#", "#2noun# #2verb#, #1adj# #1noun# #1verb#", "#2prep# #2noun#, #1noun# #1verb# #1adverb#", "#2adj# #2noun#, #1verb# #1prep# #1noun#"],
