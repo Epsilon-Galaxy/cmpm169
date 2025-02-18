@@ -158,15 +158,15 @@ function setup() {
 
   grammarLine1 = tracery.createGrammar(fiveStart);
   var resultLine1 = grammarLine1.flatten("#start#");
-  text(resultLine1, 100, 100);
+
   
   grammarLine2 = tracery.createGrammar(seven);
   var resultLine2 = grammarLine2.flatten("#start#");
-  text(resultLine2, 100, 200);
+
 
   grammarLine3 = tracery.createGrammar(fiveEnd);
   var resultLine3 = grammarLine3.flatten("#start#");
-  text(resultLine3, 100, 300);
+
 
   console.log(resultLine1);
   console.log(resultLine2);
@@ -179,6 +179,10 @@ function setup() {
 // draw() function is called repeatedly, it's the main animation loop
 function draw() {
   background(220);    
+
+  text(resultLine1, 100, 100);
+  text(resultLine2, 100, 200);
+  text(resultLine3, 100, 300);
 
 }
 
