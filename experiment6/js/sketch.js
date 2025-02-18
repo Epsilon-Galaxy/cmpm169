@@ -142,7 +142,9 @@ var grammarLine1;
 var grammarLine2;
 var grammarLine3;
 
-
+var resultLine1;
+var resultLine2;
+var resultLine3;
 
 // setup() function is called once when the program starts
 function setup() {
@@ -157,15 +159,15 @@ function setup() {
   resizeScreen();
 
   grammarLine1 = tracery.createGrammar(fiveStart);
-  var resultLine1 = grammarLine1.flatten("#start#");
+  resultLine1 = grammarLine1.flatten("#start#");
 
   
   grammarLine2 = tracery.createGrammar(seven);
-  var resultLine2 = grammarLine2.flatten("#start#");
+  resultLine2 = grammarLine2.flatten("#start#");
 
 
   grammarLine3 = tracery.createGrammar(fiveEnd);
-  var resultLine3 = grammarLine3.flatten("#start#");
+  resultLine3 = grammarLine3.flatten("#start#");
 
 
   console.log(resultLine1);
