@@ -182,7 +182,7 @@ function setup() {
 function draw() {
   background(220);    
 
-  textSize(500)
+  textSize(100)
   text(resultLine1, 100, 100);
   text(resultLine2, 100, 200);
   text(resultLine3, 100, 300);
