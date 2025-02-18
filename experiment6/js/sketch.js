@@ -127,10 +127,10 @@ function setup() {
   resizeScreen();
 
   grammarLine1 = tracery.createGrammar(fiveStart);
-  var resultLine1 = grammar.flatten("#start#");
+  var resultLine1 = grammarLine1.flatten("#start#");
   
   grammarLine2 = tracery.createGrammar(seven);
-  var resultLine2 = grammar.flatten("#start#");
+  var resultLine2 = grammarLine2.flatten("#start#");
 
   console.log(resultLine1);
   console.log(resultLine2);
